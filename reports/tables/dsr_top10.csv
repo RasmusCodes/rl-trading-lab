@@ -1,0 +1,11 @@
+strategy,sharpe
+rewards_spy:log_return,0.613372602282288
+baseline:ma_cross,0.6123543650843224
+baseline:vol_target,0.5559248542534775
+baseline:rsi2_dip,0.5432728314280034
+baseline:tsmom_252_lo,0.541429838611975
+randomized_spy:bootstrap,0.5398469454724172
+main_spy:td3,0.5328507093707016
+baseline:mv_kelly,0.5300030573211452
+randomized_spy:base,0.4944583519197841
+baseline:meanrev_5,0.47917472550307966

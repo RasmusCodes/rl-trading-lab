@@ -1,0 +1,16 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+
+# market data: downloaded from Yahoo Finance by scripts/download_data.py, not redistributed
+data/
+
+# experiment outputs (models, ledgers, logs; ~0.5 GB) - regenerate with the scripts in README
+runs/
+
+# generated, self-contained HTML builds of the report (rebuild with scripts/build_report_html.py)
+reports/report.html
+reports/rl-study-page.html

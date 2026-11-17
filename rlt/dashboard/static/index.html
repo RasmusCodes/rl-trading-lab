@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RL Trading Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>RL Trading Lab</h1>
+  <span class="sub">Training dashboard. Reads <code>runs/</code> and updates while runs train.</span>
+  <span class="spacer"></span>
+  <span class="live" id="live"><span class="dot"></span><span id="live-text">idle</span></span>
+  <button class="ctl" id="theme" title="Toggle light/dark">Theme</button>
+</header>
+
+<div class="filters">
+  <label>Experiment <select id="f-exp"></select></label>
+  <label>Algorithm <select id="f-algo"></select></label>
+  <label>Fold <select id="f-fold"></select></label>
+  <label>Variant <select id="f-tag"></select></label>
+  <label>State <select id="f-state"></select></label>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="grid2">
+  <section class="card" id="card-bars">
+    <div class="card-head"><h2>Walk-forward out-of-sample Sharpe</h2><span class="spacer"></span>
+      <button class="toggle" data-view="table">Table</button></div>
+    <p class="caption">Sharpe of the seed ensemble (daily returns averaged across seeds), test blocks of every fold chained in time. Whiskers: 95% bootstrap interval, the same statistic the report uses. Reference line: buy &amp; hold over the same windows.</p>
+    <div class="chart" id="bars"></div>
+  </section>
+  <section class="card" id="card-heat">
+    <div class="card-head"><h2>Test Sharpe by fold</h2><span class="spacer"></span>
+      <button class="toggle" data-view="table">Table</button></div>
+    <p class="caption">Each cell: one algorithm (or variant) on one 2-year test block, averaged over seeds.</p>
+    <div class="chart" id="heat"></div>
+  </section>
+</div>
+
+<section class="card" style="margin-bottom:16px">
+  <div class="card-head"><h2>Runs</h2><span class="spacer"></span><span class="hint" id="sel-hint">Select up to 8 runs to compare</span></div>
+  <div class="table-wrap" id="runs"></div>
+</section>
+
+<div class="grid2">
+  <section class="card" id="card-curves">
+    <div class="card-head"><h2>Training curves</h2><span class="spacer"></span>
+      <select id="metric"></select>
+      <button class="toggle" data-view="table">Table</button></div>
+    <p class="caption" id="curve-caption">Selected runs. Validation metrics are logged at every evaluation; training metrics every ~5,000 transitions.</p>
+    <div class="chart" id="curves"></div>
+  </section>
+  <section class="card" id="card-equity">
+    <div class="card-head"><h2>Test equity, growth of 1</h2><span class="spacer"></span>
+      <button class="toggle" data-view="table">Table</button></div>
+    <p class="caption">Selected checkpoint (best validation Sharpe) on the run's test block, after all costs. Gray: buy &amp; hold.</p>
+    <div class="chart" id="equity"></div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

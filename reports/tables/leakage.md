@@ -1,0 +1,20 @@
+| tag | algo | test_sharpe | val_sharpe | turnover | n |
+|---|---|---|---|---|---|
+| gbm_centered_ma | ppo | 6.93 | 7.24 | 63 | 2 |
+| gbm_future_return | a2c | 14.14 | 15.74 | 199 | 2 |
+| gbm_future_return | ddqn | 13.20 | 14.96 | 215 | 2 |
+| gbm_future_return | dqn | 13.37 | 15.03 | 218 | 2 |
+| gbm_future_return | ppo | 14.17 | 15.79 | 199 | 2 |
+| gbm_future_return | ppo_lstm | 14.14 | 15.62 | 201 | 2 |
+| gbm_future_return | qlearning | 12.28 | 13.66 | 181 | 2 |
+| gbm_future_return | rrl | 14.19 | 15.84 | 203 | 2 |
+| gbm_future_return | sac | 14.09 | 15.67 | 200 | 2 |
+| gbm_future_return | td3 | 13.63 | 15.35 | 215 | 2 |
+| gbm_global_zscore | ppo | -0.16 | -0.83 | 11 | 2 |
+| gbm_none | ppo | -0.27 | -0.20 | 21 | 2 |
+| gbm_smoothed_regime | ppo | 0.38 | -1.14 | 41 | 2 |
+| spy_centered_ma | ppo | 5.21 | 5.88 | 57 | 6 |
+| spy_future_return | ppo | 11.01 | 12.40 | 213 | 6 |
+| spy_global_zscore | ppo | 0.62 | -0.14 | 48 | 6 |
+| spy_none | ppo | 0.67 | 0.23 | 48 | 6 |
+| spy_smoothed_regime | ppo | 0.91 | 0.56 | 41 | 6 |
