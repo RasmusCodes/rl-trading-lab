@@ -5,6 +5,8 @@ realistic execution. It covers a vectorised trading environment, nine RL algorit
 walk-forward evaluation with a locked holdout, a training dashboard and a research report
 ([`reports/REPORT.md`](reports/REPORT.md)).
 
+**Project page:** [rasmuscodes.github.io/projects/rl-trading-lab](https://rasmuscodes.github.io/projects/rl-trading-lab/)
+
 ## Results in brief
 
 On daily data with realistic execution, none of the nine RL algorithms beat simple strategies out of sample,
@@ -106,3 +108,8 @@ Open http://127.0.0.1:8795.
   2019-01-01 onward holdout is used once, at the end, and every access is logged.
 * **Provenance.** Every run's directory records the exact config, derived seed, environment version, code
   fingerprint and package versions.
+
+## Licence
+
+Code and documents: MIT (`LICENSE`). Market data are not part of this repository; `scripts/download_data.py`
+fetches them from Yahoo Finance, whose terms apply.

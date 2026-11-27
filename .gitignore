@@ -6,7 +6,8 @@ __pycache__/
 .claude/
 
 # market data: downloaded from Yahoo Finance by scripts/download_data.py, not redistributed
-data/
+# (anchored to the root: an unanchored data/ also hid the rlt/data/ package)
+/data/
 
 # experiment outputs (models, ledgers, logs; ~0.5 GB) - regenerate with the scripts in README
 runs/
